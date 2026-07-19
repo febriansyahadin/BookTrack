@@ -24,7 +24,7 @@ export default function Navbar() {
 
         <nav className="flex items-center gap-6">
           <Link href="/" className={linkClass("/")}>
-            Stacks
+            Explore
           </Link>
           <Link href="/favorites" className={linkClass("/favorites")}>
             Favorites
