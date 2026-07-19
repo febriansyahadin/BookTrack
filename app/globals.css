@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-parchment text-ink dark:bg-night-bg dark:text-night-text transition-colors duration-300;
+  background-image: radial-gradient(circle at 1px 1px, rgba(30, 42, 56, 0.05) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.dark body {
+  background-image: radial-gradient(circle at 1px 1px, rgba(232, 227, 216, 0.05) 1px, transparent 0);
+}
+
+/* Card-catalog "call number" label */
+.call-number {
+  @apply font-mono text-[11px] tracking-widest uppercase text-library-green dark:text-gold-light;
+}
+
+/* Index-card style tab notch on cards */
+.catalog-card {
+  position: relative;
+  @apply bg-parchment-card dark:bg-night-surface border border-ink/10 dark:border-night-text/10;
+}
+
+.catalog-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 18px;
+  width: 34px;
+  height: 6px;
+  @apply bg-gold dark:bg-gold-light;
+  border-radius: 0 0 3px 3px;
+}
+
+/* Due-date stamp badge */
+.stamp {
+  @apply font-mono text-[10px] tracking-wider uppercase border border-current px-1.5 py-0.5 rounded-sm rotate-[-2deg] inline-block;
+}
+
+/* Focus visibility */
+:focus-visible {
+  outline: 2px solid theme("colors.gold.DEFAULT");
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
