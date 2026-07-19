@@ -11,7 +11,7 @@ export default function FavoritesPage() {
       <section className="space-y-2 pt-2">
         <span className="call-number">Reserved · Personal Collection</span>
         <h1 className="font-display text-3xl sm:text-4xl font-semibold text-ink dark:text-night-text">
-          My Shelf
+          Favorites
         </h1>
         <p className="text-ink/60 dark:text-night-text/60 max-w-xl">
           Saved locally in your browser — nothing leaves your device.

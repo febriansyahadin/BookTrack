@@ -27,7 +27,7 @@ export default function Navbar() {
             Stacks
           </Link>
           <Link href="/favorites" className={linkClass("/favorites")}>
-            My Shelf
+            Favorites
           </Link>
           <ThemeToggle />
         </nav>
